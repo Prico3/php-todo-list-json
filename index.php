@@ -23,11 +23,19 @@
         <div class="container pt-5">
 
             <h1 class="text-center">My Todo List</h1>
-
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mt-3">
+                <div class="col-7 d-flex">
+                    <input class="form-control" type="text" placeholder="New To Do" aria-label="New To Do" v-model="newTodo">
+                    <button class="btn btn-primary mt-2" @click="addTodo">Salva</button>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-3">
                 <div class="col-7">
                     <ul class="list-group">
-                        <li class="list-group-item" v-for="item in todoList">{{ item }}</li>
+                        <li class="list-group-item" v-for="item in todoList">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                            {{ item }}
+                        </li>
                     </ul>
                 </div>
             </div>
